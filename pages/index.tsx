@@ -4,62 +4,85 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Austin McCalley</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+      <nav className="navbar">
+        <div className="col">
+          <h2>Personal Trainer</h2>
+        </div>
+        <div className="col col_right">
+          <a href="#">
+            <h4>Login</h4>
           </a>
         </div>
+      </nav>
+
+      <main>
+
+        <img src="/main_pt.svg" alt="PT Image" className="pt_image_main" />
+
+        <div className="btn_space">
+          <a href="#" className="pt_button">
+            <h2>Get Started</h2>
+          </a>
+        </div>
+
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+        <a href="https://quedev.xyz/" target="_blank">
+          <p>Austin McCalley &copy; 2020</p>
         </a>
       </footer>
 
       <style jsx>{`
+
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .col {
+        float: left;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+      }
+
+      .col_right {
+        text-align:right;
+      }
+
+        .btn_space {
+          margin: 4%;
+        }
+
+        .pt_button {
+          display:inline-block;
+          border: 0.1em solid #000;
+          margin:0 0.3em 0.3em 0;
+          border-radius:0.3125em;
+          box-sizing: border-box;
+          text-decoration:none;
+          font-weight:300;
+          line-height: 1em;
+          color:#000;
+          text-align:center;
+          transition: all 0.2s;
+        }
+
+        .pt_button h2 {
+          margin: 0.5em 0.3em;
+        }
+
+        .pt_image_main {
+          width: 45%;
+        }
+
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -191,14 +214,50 @@ export default function Home() {
       `}</style>
 
       <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css?family=Roboto:400|Poppins:400');
+
         html,
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family:'Roboto',sans-serif;
+
         }
+
+
+html {font-size: 100%;} /*16px*/
+
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #333;
+}
+
+p {margin-bottom: 1.15rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {font-size: 2.441em;}
+
+h3 {font-size: 1.953em;}
+
+h4 {font-size: 1.563em;}
+
+h5 {font-size: 1.25em;}
+
+small, .text_small {font-size: 0.8em;}
 
         * {
           box-sizing: border-box;
