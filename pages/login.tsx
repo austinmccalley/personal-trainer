@@ -7,27 +7,33 @@ export default function Home() {
         <title>Austin McCalley</title>
       </Head>
 
-      <nav className="navbar">
+      <nav className="row">
         <div className="col">
           <h2>Personal Trainer</h2>
-        </div>
-        <div className="col col_right">
-          <a href="#">
-            <h4>Login</h4>
-          </a>
         </div>
       </nav>
 
       <main>
+        <div className="wrap">
+          <div className="row">
+            <div className="col">
+              <img src="/login.svg" alt="Login Image" className="login_image" />
 
-        <img src="/main_pt.svg" alt="PT Image" className="pt_image_main" />
+            </div>
+            <div className="col login">
+              <form>
+                <input className="uname" placeholder="username" type="username">
 
-        <div className="btn_space">
-          <a href="#" className="pt_button">
-            <h2>Get Started</h2>
-          </a>
+                </input>
+                <br />
+                <input className="pass" placeholder="password" type="password">
+
+                </input>
+
+              </form>
+            </div>
+          </div>
         </div>
-
       </main>
 
       <footer>
@@ -38,48 +44,39 @@ export default function Home() {
 
       <style jsx>{`
 
-      .navbar {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-      }
-
-      .col {
-        float: left;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1;
-      }
-
-      .col_right {
-        text-align:right;
-      }
-
-        .btn_space {
-          margin: 4%;
+        .uname {
+          border: none;
+          border-bottom: 1.5px solid;
+        }
+        .pass {
+          border: none;
+          border-bottom: 1.5px solid;
         }
 
-        .pt_button {
-          display:inline-block;
-          border: 0.1em solid #000;
-          margin:0 0.3em 0.3em 0;
-          border-radius:0.3125em;
-          box-sizing: border-box;
-          text-decoration:none;
-          font-weight:300;
-          line-height: 1em;
-          color:#000;
-          text-align:center;
-          transition: all 0.2s;
+        .login {
+          display: flex;;
+          align-items: center;
+          justify-content: center;
         }
 
-        .pt_button h2 {
-          margin: 0.5em 0.3em;
+        .row {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
         }
 
-        .pt_image_main {
-          width: 45%;
+        .col {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+        }
+
+        .col_right {
+          text-align:right;
+        }
+        .login_image {
+          width: 50%;
         }
 
         .container {
@@ -262,6 +259,6 @@ small, .text_small {font-size: 0.8em;}
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </div >
   )
 }
